@@ -1,0 +1,46 @@
+          <div class="empty-state-card" id="errors-empty-state">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+            <p>No hay errores sintácticos detectados. Presiona <strong>"Analizar"</strong> para validar el código.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Pestaña 3: Tokens generados -->
+      <div class="tab-content" id="tab-tokens">
+        <div class="tokens-table-container">
+          <table class="tokens-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Tipo</th>
+                <th>Lexema</th>
+                <th>Línea</th>
+                <th>Columna</th>
+              </tr>
+            </thead>
+            <tbody id="tokens-tbody">
+              <tr>
+                <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 30px;">
+                  El flujo de tokens se mostrará aquí al presionar "Analizar".
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Overlay con Spinner de Análisis (300-500ms) -->
+      <div class="analysis-spinner-overlay" id="analysis-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-text">Analizando sintaxis...</div>
+      </div>
+    </section>
+  </main>
+  <!-- Scripts modulares -->
+  <script src="lexer.js"></script>
+  <script src="parser.js"></script>
+  <script src="tree.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
